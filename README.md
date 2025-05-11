@@ -116,7 +116,7 @@ Se recomienda realizar esta instalación mediante los siguientes comandos y a pa
 git clone https://github.com/EstebanMS77/Maestria_IA_AplicacionI_Actividad3.git
 
 cd Maestria_IA_AplicacionI_Actividad3
-
+.\Entorno_Actividad3\Scripts\activate    
 git checkout master
 # Instalar dependencias
 pip install -r requirements.txt
