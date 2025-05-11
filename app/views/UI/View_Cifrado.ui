@@ -99,10 +99,16 @@
      </font>
     </property>
     <property name="inputMask">
-     <string/>
+     <string>000000</string>
+    </property>
+    <property name="maxLength">
+     <number>6</number>
     </property>
     <property name="alignment">
      <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="QLabel" name="Label_Mensaje">
@@ -125,6 +131,24 @@
     </property>
     <property name="alignment">
      <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Button_Inicio">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Ravie</family>
+     </font>
+    </property>
+    <property name="text">
+     <string>Inicio</string>
     </property>
    </widget>
   </widget>

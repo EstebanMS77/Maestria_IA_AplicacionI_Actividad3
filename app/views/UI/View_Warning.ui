@@ -42,23 +42,23 @@
    <widget class="QLabel" name="Label_Error">
     <property name="geometry">
      <rect>
-      <x>130</x>
+      <x>20</x>
       <y>120</y>
-      <width>521</width>
+      <width>701</width>
       <height>181</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Ravie</family>
-      <pointsize>14</pointsize>
+      <pointsize>8</pointsize>
      </font>
     </property>
     <property name="text">
      <string>Mensaje Error</string>
     </property>
     <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+     <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="Img_Error">
@@ -93,6 +93,24 @@
     </property>
     <property name="openExternalLinks">
      <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Button_Inicio">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Ravie</family>
+     </font>
+    </property>
+    <property name="text">
+     <string>Inicio</string>
     </property>
    </widget>
   </widget>

@@ -1,20 +1,17 @@
-from controllers.View_Inicial import View_Inicial
-from controllers.View_Warning import View_Warning
-import sys
+##Librerias requeridas para la aplicacion
+from controllers.controler import Controler_App
 from PyQt6.QtWidgets import QApplication
+import sys
 
 
-
+## Definicion de la funcion principal
 if __name__ == "__main__":
     
     try:
-        app  = QApplication(sys.argv)
-        View_Inicial = View_Inicial()
-        View_Inicial.Run_Screen(app)
+        App  = QApplication(sys.argv)
+        Obj_Controler_App = Controler_App() 
+        sys.exit(App.exec()) 
+
     except Exception as e:
-        QApplication.closeAllWindows()
-        app = QApplication(sys.argv)
-        View_Warning = View_Warning()
-        View_Warning.Run_Screen(app,type(e),e.args)
-        QApplication.quit()
-        
+        print("Se ha presentado un error en el aplicativo, de tipo:\n"+ str(type(e))+ "\n Mensaje:" +str(e.args))
+        sys.exit()
