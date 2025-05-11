@@ -226,13 +226,13 @@ En esta seccion encontrara el desarrollo grafico de las pantallas, estan compart
 
     Esta es la pantalla que permirira el ingreso por parte del usuario con el fin de poder cifrar el codigo:
 
-    <img src ="app\views\UI\resources\ScreenshotPantallaCIfrado.png" height="400">
+    <img src ="app\views\UI\resources\ScreenshotPantallaCifrado.png" height="400">
 
 3. Pestaña Descifrado
 
     Esta es la pantalla que permirira el ingreso por parte del usuario con el fin de poder cifrar el codigo:
 
-    <img src ="app\views\UI\resources\ScreenshotPantallaCIfrado.png" height="400">
+    <img src ="app\views\UI\resources\ScreenshotPantalladescifrado.png" height="400">
 
 3. Pestaña Warning
 
@@ -245,8 +245,14 @@ En esta seccion encontrara el desarrollo grafico de las pantallas, estan compart
 
 En el siguiente videp se realiza una prueba de cifrado y descifrado de unos numeros, donde se busca que cada uno retorne el valor esperado, ademas de lo anteropr se corrobora la navegabilidad entre pantallas:
 
-<iframe width="560" height="315" src="app\views\UI\resources\VideoFuncionalidad.mp4"></iframe>
+1. Funcionamiento optimo:
+    <img width="560" height="315" src="app\views\UI\resources\VideoFuncionalidad.gif">
 
+2. Funcionamiento con excepciones:
+
+Para este escenario se fuerza la excepcion mediante, la modificacion del codigo, dejando una funcion no funcional:
+
+<img width="560" height="315" src="app\views\UI\resources\VideoNoFuncionalidad.gif">
 
 
 
