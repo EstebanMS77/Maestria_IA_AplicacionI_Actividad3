@@ -26,10 +26,13 @@ Esteban Murcia Saavedra
         <ul>
         <li><a href="#programación-orientada-a-objetos-poo">Programación Orientada a Objetos (POO)</a></li>
         <li><a href="#modelo-vista-controlador-mvc">Modelo-Vista-Controlador (MVC)</a></li>
+        <li><a href="#python">Python</a></li>
+        <li><a href="#qt-y-pyqt6">Qt y PyQt6</a></li>
+        <li><a href="#qt-designer">Qt Designer</a></li>
       </ul>
     </li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
+    <li><a href="#screen-diseñadas">Screen diseñadas</a></li>
+    <li><a href="#funcionalidad">Funcionalidad</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
@@ -161,57 +164,93 @@ Actividad3/
 
 #### **Programación Orientada a Objetos (POO)**
 
-    El paradigma de Programación Orientada a Objetos (POO) permite estructurar el código en clases que representen entidades con atributos y comportamientos. Utilizar los principios de encapsulamiento, herencia, polimorfismo y abstracción para organizar el software de forma modular, reutilizable y mantenible. Modelar objetos del mundo real en componentes de software que interactúen entre sí, facilitando la extensión y el mantenimiento del código.
+El paradigma de Programación Orientada a Objetos (POO) permite estructurar el código en clases que representen entidades con atributos y comportamientos. Utilizar los principios de encapsulamiento, herencia, polimorfismo y abstracción para organizar el software de forma modular, reutilizable y mantenible. Modelar objetos del mundo real en componentes de software que interactúen entre sí, facilitando la extensión y el mantenimiento del código.
 
-    Ejemplo: 
+Ejemplo: 
 
-    ```bash
-        ## Librerias requeridas para la vista inicial
-        import sys
-        from PyQt6 import uic 
-        from PyQt6.QtWidgets import *
-        from PyQt6.QtGui import *
-        from views.UI import resources
-        from PyQt6.QtCore import pyqtSignal
+```bash
+    class Persona:
+        def __init__(self, nombre, edad):
+            self.nombre = nombre
+            self.edad = edad
 
-        ##Definicion de la clase View_Inicial
-        class View_Warning(QMainWindow):
+        def saludar(self):
+            print(f"Hola, mi nombre es {self.nombre} y tengo {self.edad} años.")
 
-            #   #Propiedades de la clase
-            PathFile_ViewWarning = r"app\views\UI\View_Warning.ui"
-            PathFile_ViewIcon = r"app\views\UI\resources\cyber-criminal.png"
-            Sig_Btn_Clicked_Inicio = pyqtSignal() 
+    # Crear una instancia de la clase
+    persona1 = Persona("Ana", 30)
 
-            ## Constructor de la clase
-            def __init__(self):  
-            super().__init__()
-            uic.loadUi(self.PathFile_ViewWarning, self)
-            self.setWindowIcon(QIcon(self.PathFile_ViewIcon))
-            self.Label_Error = self.findChild(QLabel,"Label_Error")
-
-            self.Btn_Inicio = self.findChild(QPushButton, "Button_Inicio") 
-            self.Btn_Inicio.clicked.connect(self._Enviar_Btn_Inicio)
-
-
-            def Write_Error(self,Str_Error):      
-
-            self.Label_Error.setText(Str_Error)
-
-            def _Enviar_Btn_Inicio(self):
-            self.Sig_Btn_Clicked_Inicio.emit()
-    ```
+    # Llamar al método
+    persona1.saludar()
+```
 
 #### **Modelo-Vista-Controlador (MVC)**
 
-    El patrón de arquitectura Modelo-Vista-Controlador (MVC) para separar las responsabilidades de la aplicación en tres componentes principales:
+El patrón de arquitectura Modelo-Vista-Controlador (MVC) para separar las responsabilidades de la aplicación en tres componentes principales:
 
-        - Modelo: Gestionar los datos, la lógica de negocio y las reglas del sistema.
+- Modelo: Gestionar los datos, la lógica de negocio y las reglas del sistema.
 
-        - Vista: Representar la interfaz de usuario y mostrar la información mediante GUI.
+- Vista: Representar la interfaz de usuario y mostrar la información mediante GUI.
 
-        - Controlador: Intermediar entre la vista y el modelo, procesando entradas del usuario y actualizando la vista o los datos según corresponda.
+- Controlador: Intermediar entre la vista y el modelo, procesando entradas del usuario y actualizando la vista o los datos según corresponda.
 
 Adoptar esta estructura para mejorar la organización del proyecto, facilitar el desarrollo colaborativo y permitir una mayor escalabilidad.
+
+#### **Python**
+
+Lenguaje de programación Python por su tipado dinámico, sintaxis clara y enfoque multiparadigma. Utilizarlo para desarrollar aplicaciones de alto nivel de forma rápida y mantenible, aprovechando su amplia comunidad y ecosistema de bibliotecas especializadas. Integrar sus características con herramientas externas para desarrollar interfaces gráficas, manipulación de datos y control de lógica de negocio.
+
+#### **Qt y PyQt6**
+
+Utilizar Qt, un framework multiplataforma desarrollado en C++, para construir interfaces gráficas robustas y modernas. Emplear PyQt6, que actúa como binding de Qt para Python, para acceder a los módulos de Qt desde código Python. Gestionar la interfaz mediante widgets, eventos y señales/slots, permitiendo una arquitectura desacoplada y orientada a objetos.
+
+#### **Qt Designer**
+
+Diseñar interfaces gráficas utilizando Qt Designer, una herramienta visual que permite crear archivos .ui a través de un entorno de desarrollo gráfico. Separar el diseño visual de la lógica de negocio, permitiendo modificar la interfaz sin alterar el código funcional. Exportar los diseños a clases Python utilizando herramientas como pyuic6.
+
+
+### Screen diseñadas 
+
+En esta seccion encontrara el desarrollo grafico de las pantallas, estan compartiran con un boton de inicio, este permitira volver a la pantalla inicial, cuando el usuario lo requiera.
+
+1. Pestaña Inicial
+
+    Esta es la pantalla que lanzara la app cuando se ejecute por primera vez esta contara con la informaciondel "Hacker" encargado de desarrollar la applicacion, esta contara con:
+
+    - Boton de cifrado
+    - Boton de descifrado
+
+    <img src ="app\views\UI\resources\ScreenshotPantallaInicial.png" height="400">
+
+2. Pestaña Cifrado
+
+    Esta es la pantalla que permirira el ingreso por parte del usuario con el fin de poder cifrar el codigo:
+
+    <img src ="app\views\UI\resources\ScreenshotPantallaCIfrado.png" height="400">
+
+3. Pestaña Descifrado
+
+    Esta es la pantalla que permirira el ingreso por parte del usuario con el fin de poder cifrar el codigo:
+
+    <img src ="app\views\UI\resources\ScreenshotPantallaCIfrado.png" height="400">
+
+3. Pestaña Warning
+
+    Esta es la pantalla permite el control de las exepciones, en caso de que el aplicativo falle este permitira la visualizacion más amigable del error:
+
+    <img src ="app\views\UI\resources\ScreenshotPantallaWarning.png" height="400">
+
+
+### Funcionalidad
+
+En el siguiente videp se realiza una prueba de cifrado y descifrado de unos numeros, donde se busca que cada uno retorne el valor esperado, ademas de lo anteropr se corrobora la navegabilidad entre pantallas:
+
+<iframe width="560" height="315" src="app\views\UI\resources\VideoFuncionalidad.mp4"></iframe>
+
+
+
+
+
 
 
 
