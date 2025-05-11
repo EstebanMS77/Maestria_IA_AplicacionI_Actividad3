@@ -19,18 +19,21 @@ class View_Inicial(QMainWindow):
     ## Constructor de la clase
     def __init__(self): 
                
-        super().__init__()
-        uic.loadUi(self.PathFile_ViewInicial, self)
-        self.setWindowIcon(QIcon(self.PathFile_ViewIcon))
+        super().__init__() ##Asignacion de memoria
+        uic.loadUi(self.PathFile_ViewInicial, self) #Lectura de la interfaz grafica
+        self.setWindowIcon(QIcon(self.PathFile_ViewIcon))   ##Seleccion de icono de la ventana
+
+        ##Creacion de las instanciasde los elemntos graficos a interactuar
         self.Btn_Cifrar = self.findChild(QPushButton, "Button_Encriptar")
         self.Btn_Descifrar = self.findChild(QPushButton, "Button_Decepcriptar")
         self.Btn_Inicio = self.findChild(QPushButton, "Button_Inicio")
 
+        ##Asignacion de los eventos generados por el usuario a los metodos de la clase
         self.Btn_Cifrar.clicked.connect(self._Enviar_Btn_Cifrar)
         self.Btn_Descifrar.clicked.connect(self._Enviar_Btn_Descifrar)
         self.Btn_Inicio.clicked.connect(self._Enviar_Btn_Inicio)
 
-
+    ## Metodos de la clase
     def _Enviar_Btn_Cifrar(self):
 
         self.Sig_Btn_Clicked_Cifrar.emit()

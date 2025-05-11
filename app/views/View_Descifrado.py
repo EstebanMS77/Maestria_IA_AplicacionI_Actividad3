@@ -18,18 +18,21 @@ class View_Descifrado(QMainWindow):
     ## Constructor de la clase
     def __init__(self):
         
-        super().__init__()
-        uic.loadUi(self.PathFile_View_Descifrado, self)
-        self.setWindowIcon(QIcon(self.PathFile_ViewIcon))   
+        super().__init__() ##Asignacion de memoria
+        uic.loadUi(self.PathFile_View_Descifrado, self) #Lectura de la interfaz grafica
+        self.setWindowIcon(QIcon(self.PathFile_ViewIcon))   ##Seleccion de icono de la ventana
 
+        ##Creacion de las instanciasde los elemntos graficos a interactuar
         self.Btn_Inicio = self.findChild(QPushButton, "Button_Inicio")    
         self.InputText_Codigo = self.findChild(QLineEdit, "InputText_Codigo")
         self.lcdNumber_Cifrado = self.findChild(QLCDNumber, "lcdNumber_Cifrado")
 
-
+        ##Asignacion de los eventos generados por el usuario a los metodos de la clase
         self.Btn_Inicio.clicked.connect(self._Enviar_Btn_Inicio)
         self.InputText_Codigo.textChanged.connect(self._Enviar_TextChange_Codigo)   
 
+
+    ## Metodos de la clase
     def _Enviar_Btn_Inicio(self):
         self.Sig_Btn_Clicked_Inicio.emit()
 

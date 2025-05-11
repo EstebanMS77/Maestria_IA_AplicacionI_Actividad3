@@ -8,7 +8,8 @@ import sys
 if __name__ == "__main__":
     
     try:
-        App  = QApplication(sys.argv)
+        ##Inicializacion de la aplicacion
+        App  = QApplication(sys.argv) 
         Obj_Controler_App = Controler_App() 
         sys.exit(App.exec()) 
 

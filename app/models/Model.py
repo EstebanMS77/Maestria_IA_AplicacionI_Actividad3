@@ -1,17 +1,20 @@
+## Librerias requeridas para el modelo
 import math
 import os
 
 
 class Model():
 
+    ## Propiedades de la clase
     Int_Cifrado = 0
     Digitos_Cifrado = []
 
+    ## Constructor de la clase
     def __init__(self,Num_Cifrado):
         self.Int_Cifrado = Num_Cifrado
         self.Digitos_Cifrado = []
 
-
+    ## Metodos de la clase
     def _Calcular_Cifrado(self,Num_Cifrado):
 
         try:

@@ -1,7 +1,7 @@
 # **Aplicación de escritorio con interfaz gráfica para cifrado y descifrado de datos**
 Esteban Murcia Saavedra
 
->En este repositorio estara alojada la actividad 3 de la asignatura de Aplicaciones I de la maestria en inteligencia artificial
+>En este repositorio estará alojada la actividad 3 de la asignatura de Aplicaciones I de la maestría en inteligencia artificial
 
 
 <!-- TABLE OF CONTENTS -->
@@ -9,7 +9,7 @@ Esteban Murcia Saavedra
   <summary>Tabla de Contenidos</summary>
   <ol>
     <li>
-      <a href="#descripcion-de-la-actividad">Descripcion de la actividad</a>
+      <a href="#descripcion-de-la-actividad">Descripción de la actividad</a>
       <ul>
         <li><a href="#requerimientos-de-la-actividad">Requerimientos de la actividad</a></li>
       </ul>
@@ -33,8 +33,8 @@ Esteban Murcia Saavedra
     </li>
     <li><a href="#screen-diseñadas">Screen diseñadas</a></li>
     <li><a href="#funcionalidad">Funcionalidad</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#conclusiones">Conclusiones</a></li>
+
   </ol>
 </details>
 
@@ -110,7 +110,7 @@ wheel==0.45.1
 
 ### Instalacion
 
-Se recomienda realizar esta instalacion mediante los siguientes comandos y apartir del documento <a href="requirements.txt">requirements.txt</a>:
+Se recomienda realizar esta instalación mediante los siguientes comandos y a partir del documento <a href="requirements.txt">requirements.txt</a>:
 
 ```bash
 git clone https://github.com/EstebanMS77/Maestria_IA_AplicacionI_Actividad3.git
@@ -121,7 +121,7 @@ pip install -r requirements.txt
 # Ejecutar aplicación
 python app\__init__.py
 ```
-El repositorio incluye un entorno virtual preconfigurado; sin embargo,Debido al peso de algunas bibliotecas necesarias para el proyecto, se recomienda reinstalar las dependencias ejecutando el archivo <a href="requirements.txt">requirements.txt</a>.
+El repositorio incluye un entorno virtual preconfigurado; sin embargo, debido al peso de algunas bibliotecas necesarias para el proyecto, se recomienda reinstalar las dependencias ejecutando el archivo <a href="requirements.txt">requirements.txt</a>.
 
 En caso de no utilizar el entorno virtual proporcionado, se puede crear uno nuevo siguiendo estos pasos:
 
@@ -133,7 +133,7 @@ python -m venv venv
 
 ### **Estructura de carpetas**
 
-Una vez garantizado lo anterior, contara con la siguiente estructura de carpetas, en esta encontrara los archivos más relevantes:
+Una vez garantizado lo anterior, contará con la siguiente estructura de carpetas, en esta encontrará los archivos más relevantes:
 
 ```bash
 Actividad3/
@@ -160,7 +160,7 @@ Actividad3/
 │       └── controler.py 
 ```
 
-### Marco Teorico
+### Marco Teórico
 
 #### **Programación Orientada a Objetos (POO)**
 
@@ -211,11 +211,11 @@ Diseñar interfaces gráficas utilizando Qt Designer, una herramienta visual que
 
 ### Screen diseñadas 
 
-En esta seccion encontrara el desarrollo grafico de las pantallas, estan compartiran con un boton de inicio, este permitira volver a la pantalla inicial, cuando el usuario lo requiera.
+En esta sección encontrará el desarrollo gráfico de las pantallas, estas compartirán con un botón de inicio, este permitirá volver a la pantalla inicial, cuando el usuario lo requiera.
 
 1. Pestaña Inicial
 
-    Esta es la pantalla que lanzara la app cuando se ejecute por primera vez esta contara con la informaciondel "Hacker" encargado de desarrollar la applicacion, esta contara con:
+    Esta es la pantalla que lanzará la app cuando se ejecute por primera vez, esta contara con la informaciondel "Hacker" encargado de desarrollar la applicación, esta contará con:
 
     - Boton de cifrado
     - Boton de descifrado
@@ -224,7 +224,7 @@ En esta seccion encontrara el desarrollo grafico de las pantallas, estan compart
 
 2. Pestaña Cifrado
 
-    Esta es la pantalla que permirira el ingreso por parte del usuario con el fin de poder cifrar el codigo:
+    Esta es la pantalla que permirirá el ingreso por parte del usuario con el fin de poder cifrar el código:
 
     <img src ="app\views\UI\resources\ScreenshotPantallaCifrado.png" height="400">
 
@@ -236,28 +236,41 @@ En esta seccion encontrara el desarrollo grafico de las pantallas, estan compart
 
 3. Pestaña Warning
 
-    Esta es la pantalla permite el control de las exepciones, en caso de que el aplicativo falle este permitira la visualizacion más amigable del error:
+    Esta es la pantalla que permite el control de las excepciones, en caso de que el aplicativo falle, este permitira la visualización más amigable del error:
 
     <img src ="app\views\UI\resources\ScreenshotPantallaWarning.png" height="400">
 
 
 ### Funcionalidad
 
-En el siguiente videp se realiza una prueba de cifrado y descifrado de unos numeros, donde se busca que cada uno retorne el valor esperado, ademas de lo anteropr se corrobora la navegabilidad entre pantallas:
+En el siguiente GIF se realiza una prueba de cifrado y descifrado de unos números, donde se busca que cada uno retorne el valor esperado, ademas de lo anteror se corrobora la navegabilidad entre pantallas:
 
 1. Funcionamiento optimo:
-    <img width="560" height="315" src="app\views\UI\resources\VideoFuncionalidad.gif">
+
+    <img src="app\views\UI\resources\VideoFuncionalidad.gif">
+
+
 
 2. Funcionamiento con excepciones:
 
-Para este escenario se fuerza la excepcion mediante, la modificacion del codigo, dejando una funcion no funcional:
+    Para este escenario se fuerza la excepcion mediante, la modificacion del codigo, dejando una funcion no funcional:
 
-<img width="560" height="315" src="app\views\UI\resources\VideoNoFuncionalidad.gif">
-
-
+    <img  src="app\views\UI\resources\VideoNoFuncionalidad.gif">
 
 
+En caso de requerir visualizar mejor estos escenarios, los videos se encontraran alojados en la carpeta de <a href="app\views\UI\resources">resources</a>
 
+
+
+### Conclusiones
+
+He trabajado en el desarrollo de aplicaciones en distintas plataformas como Windows Forms, Power Apps y Android Studio, cada una con enfoques y niveles de control diferentes. Actualmente, el desarrollo de software se está orientando cada vez más hacia plataformas low-code, que si bien facilitan la creación de soluciones, también reducen el nivel de control que tenemos sobre el comportamiento interno de la aplicación. Por ello, sigue siendo fundamental comprender en profundidad cómo desarrollar aplicaciones desde cero, especialmente cuando se trata de estructurar proyectos de forma ordenada.
+
+La arquitectura MVC (Modelo-Vista-Controlador) es una de las herramientas clave para lograr esta estructuración, ya que permite dividir claramente la lógica del programa, la interfaz de usuario y el control de flujo. Esta segmentación facilita la organización del código, la reutilización de componentes y la asignación adecuada de responsabilidades. Asimismo, entender la abstracción de objetos y su representación a través de clases es un valor agregado que potencia cualquier proyecto.
+
+Python, por su parte, es un lenguaje sumamente versátil, con una gran comunidad, una vasta colección de librerías y una sintaxis que favorece una curva de aprendizaje rápida. Aunque anteriormente no había trabajado con interfaces gráficas en Python ni profundizado demasiado en la programación orientada a objetos (POO) dentro de este lenguaje, esta actividad me permitió aplicar ambos conceptos en nuevos contextos. Sin embargo, no todo fue sencillo: por ejemplo, integrar imágenes en Qt resultó ser más complejo de lo esperado, y la falta de un widget específico para texto enriquecido complicó un poco el desarrollo.
+
+Tanto la programación orientada a objetos como la arquitectura MVC tienen sus propios desafíos. Comprender su funcionamiento lógico puede ser una tarea que requiere reflexión constante. Siempre surge el cuestionamiento: ¿esta funcionalidad debería pertenecer a esta clase?, ¿estamos respetando el patrón arquitectónico si un controlador ejecuta un método de la vista?, ¿no deberían las vistas limitarse únicamente a la presentación? Estos dilemas son parte del proceso. Lo interesante es que, muchas veces, cuando enfrentamos estas dudas, la propia arquitectura o el paradigma nos da pistas de que quizás estamos complicando más de lo necesario. Esa lucha por no romper las "reglas" del diseño es, en sí misma, parte del aprendizaje y del crecimiento como desarrolladores.
 
 
 
