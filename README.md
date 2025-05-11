@@ -116,22 +116,16 @@ Se recomienda realizar esta instalación mediante los siguientes comandos y a pa
 git clone https://github.com/EstebanMS77/Maestria_IA_AplicacionI_Actividad3.git
 
 cd Maestria_IA_AplicacionI_Actividad3
-.\Entorno_Actividad3\Scripts\activate    
+
+python -m venv venv
+.\venv\Scripts\activate   
+
 git checkout master
 # Instalar dependencias
 pip install -r requirements.txt
 
 # Ejecutar aplicación
 python app\__init__.py
-```
-El repositorio incluye un entorno virtual preconfigurado; sin embargo, debido al peso de algunas bibliotecas necesarias para el proyecto, se recomienda reinstalar las dependencias ejecutando el archivo <a href="requirements.txt">requirements.txt</a>.
-
-En caso de no utilizar el entorno virtual proporcionado, se puede crear uno nuevo siguiendo estos pasos:
-
-```bash
-python -m venv venv
-
-.\venv\Scripts\activate
 ```
 
 ### **Estructura de carpetas**
